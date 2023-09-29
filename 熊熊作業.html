@@ -1,0 +1,215 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+    /* 身體 */
+    .container {
+      width: 600px;
+      height: 600px;
+      border-radius: 50%;
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      margin: auto;
+      background: black;
+
+    }
+
+    /* 腮紅左 */
+    .container::before {
+      content: "";
+      position: absolute;
+      width: 150px;
+      height: 150px;
+      border-radius: 50%;
+      background: red;
+      top: 50%;
+      left: -5%;
+      transform: translate(-5%, -50%);
+    }
+
+    /* 腮紅右 */
+    .container::after {
+      content: "";
+      position: absolute;
+      width: 150px;
+      height: 150px;
+      border-radius: 50%;
+      background: red;
+      top: 50%;
+      right: -5%;
+      transform: translate(5%, -50%);
+    }
+
+    /* 嘴巴白色 */
+    .mouth {
+      height: 170px;
+      width: 260px;
+      border-radius: 50%;
+      background: white;
+      position: absolute;
+      left: 50%;
+      top: 55%;
+      transform: translate(-50%, -55%);
+    }
+
+    /* 鼻子 */
+    .mouth::before {
+      content: '';
+      width: 60px;
+      height: 40px;
+      border-radius: 50%;
+      background: black;
+      position: absolute;
+      left: 50%;
+      top: 15%;
+      transform: translate(-50%, -15%);
+      /* z-index: 3; */
+    }
+
+    /* 嘴巴 */
+    .mouth::after {
+      content: '';
+      position: absolute;
+      width: 160px;
+      height: 55px;
+      border-radius: 50%;
+      background: black;
+      position: absolute;
+      left: 50%;
+      top: 70%;
+      transform: translate(-50%, -70%);
+    }
+
+    /* 眼睛預設大圓 */
+    .eye {
+      width: 600px;
+      height: 600px;
+      /* border: 1px solid yellow; */
+      border-radius: 50%;
+      position: absolute;
+      /* left: 0%;
+      top: 0%;
+      transform: translate(0%, 0%) */
+    }
+
+    /* 左眼 */
+    .eye::before {
+      content: '';
+      width: 85px;
+      height: 85px;
+      border: 22px solid white;
+      border-radius: 50%;
+      position: absolute;
+      left: 23%;
+      top: 24%;
+      transform: translate(-23%, -24%)
+    }
+
+    /* 右眼 */
+    .eye::after {
+      content: '';
+      width: 85px;
+      height: 85px;
+      border: 22px solid white;
+      border-radius: 50%;
+      position: absolute;
+      right: 23%;
+      top: 24%;
+      transform: translate(23%, -24%)
+    }
+
+    /* 耳多大圓 */
+    .ear1 {
+      width: 600px;
+      height: 600px;
+      /* border: 1px solid yellow; */
+      border-radius: 50%;
+      position: absolute;
+    }
+
+    /* 白底黑邊左耳 */
+    .ear1::before {
+      content: '';
+      width: 70px;
+      height: 70px;
+      background: white;
+      border: 20px solid black;
+      border-radius: 50%;
+      position: absolute;
+      left: 8%;
+      top: 1cqb;
+      /* transform: translate(0%, 0%) */
+    }
+
+    /* 白底黑邊右耳 */
+    .ear1::after {
+      content: '';
+      width: 70px;
+      height: 70px;
+      background: white;
+      border: 20px solid black;
+      border-radius: 50%;
+      position: absolute;
+      right: 8%;
+      top: 1%;
+      transform: translate(0%, 0%)
+    }
+
+    /* 胸前大圓 */
+    .heart {
+      width: 175px;
+      height: 80px;
+      /* border: 1px solid yellow; */
+      position: absolute;
+      left: 50%;
+      bottom: 10%;
+      transform: translate(-50%, 10%);
+    }
+
+    /* 胸口*/
+    .heart::before {
+      content: '';
+      width: 80px;
+      height: 80px;
+      background: white;
+
+      /* border: 1px solid red; */
+      position: absolute;
+      left: 0%;
+      top: 0%;
+      transform: skewX(50deg)
+    }
+
+    /* 胸口 */
+    .heart::after {
+      content: '';
+      width: 80px;
+      height: 80px;
+      background: white;
+      position: absolute;
+      right: 0%;
+      top: 0%;
+      transform: skewX(-50deg);
+    }
+
+    */
+  </style>
+</head>
+
+<body>
+  <div class="container">
+    <div class="mouth"></div>
+    <div class="eye"></div>
+    <div class="ear1"></div>
+    <div class="heart"></div>
+  </div>
+</body>
+
+</html>
